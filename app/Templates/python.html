@@ -1,0 +1,54 @@
+{% extends 'layout.html'%}
+#TAB NAME
+    {% block title %} Ejercicios de python en html{% endblock %}
+#TAB NAME
+
+#BODY
+    {% block body %}
+    <h1> Ejercicios de python en html </h1>
+    <py-script> print('Mensaje impreso desde pyhton pyscript') </py-script>
+<py-script> #juego. se lanza un dado, si cae pa gana $1000 y puede volver a tirar,
+    #sino termina y dice cuanto gano en total
+
+import random
+import time
+
+saldo = 0
+dado = random.randint (1,6)
+print('El dado es:', dado)
+residuo = dado % 2
+
+while residuo == 0:
+    time
+    saldo = saldo + 1000
+    dado = random.randint (1,6)
+    print('El dado es:', dado)
+    residuo = dado % 2
+print('el juego termino, ganaste: ', saldo)</py-script>
+
+<p> ejercicio 2 con PI </p>
+b><p>Today is <u><label id='today'></label></u></p></b>
+    <br>
+    <div id="pi" class="alert alert-primary"></div>
+    <py-script>
+import datetime as dt
+pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
+
+def compute_pi(n):
+    pi = 2
+    for i in range(1,n):
+        pi *= 4 * i ** 2 / (4 * i ** 2 - 1)
+    return pi
+
+pi = compute_pi(100000)
+pyscript.write('pi', f'π is approximately {pi:.3f}')
+    </py-script>
+
+
+
+
+
+
+    {% endblock %}
+
+#BODY

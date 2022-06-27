@@ -1,0 +1,48 @@
+body{
+background-color:floralwhite;
+}
+/* Estilo para que el  menu sea horizontal con efecto hover */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: rgb(255, 255, 255);
+    /*sticky menu arriba (cambiar top por bottom para fijar abajo)*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    /*el menu se alinea a la izquierda (cambiar por right para alinear a la derecha*/
+    float: left;
+}
+
+li a {
+    /*Menu en estado normal (color de letra, alineacion del texto*/
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a :hover:not(.active){
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color:blueviolet;
+}
+
+/* Color en hover a rojo */
+li a:hover {
+    background-color: rgb(202, 197, 197);
+}
+li a.active {
+    color: white;
+    background-color: #04AA6D;
+}

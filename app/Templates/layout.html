@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <!--aqui van las librerias que requiera de terceros como numpy u otras-->
+    <py-env>
+    - paths:
+    <!--    - /aquivaelarchivo_local_que_se_requiere_jalar.py-->
+    </py-env>
+    <title>{% block title %} {% endblock %}</title>
+    <ul >
+        <li><a class="active" href="/">Inicio</a></li>
+        <li><a class="" href="/python">Python en la web</a></li>
+        <li><a class="" href="/contacto">Contacto</a></li>
+    </ul>
+    <link  rel="stylesheet" href="{{ url_for('static', filename= 'css/layout.css')}}">
+    <br>
+    <br>
+</head>
+
+<body>
+{% block body %}
+{% endblock %}
+<script src="{{ url_for('static', filename= 'js/layout.js')}}"> </script>
+</body>
+</html>
